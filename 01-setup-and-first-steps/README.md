@@ -272,9 +272,14 @@ Notice how each prompt builds on the previous answer. You're having a conversati
 
 **Best for**: Complex tasks where you want to review the approach before execution. Similar to planning a route before a trip using GPS.
 
-Plan mode helps you create a step-by-step plan before writing any code. Use the `/plan` command or press **Shift+Tab** to cycle into Plan Mode:
+Plan mode helps you create a step-by-step plan before writing any code. Use the `/plan` command, press **Shift+Tab** to cycle into Plan Mode, or use the `--plan` startup flag:
 
 > 💡 **Tip**: **Shift+Tab** cycles between modes: Interactive → Plan → Autopilot. Press it anytime during an interactive session to switch modes without typing a command.
+
+> 💡 **Startup shortcut**: You can launch the CLI directly in Plan mode from your terminal using the `--plan` flag — great when you already know what you want to plan:
+> ```bash
+> copilot --plan "Add a mark as read command to the book app"
+> ```
 
 ```bash
 copilot
@@ -312,7 +317,7 @@ Proceed with implementation? [Y/n]
 
 > 💡 **Want something more complex?** Try: `/plan Add search and filter capabilities to the book app`. Plan mode scales from simple features to full applications.
 
-> 📚 **Autopilot mode**: You may have noticed Shift+Tab cycles through a third mode called **Autopilot**. In autopilot mode, Copilot works through an entire plan without waiting for your input after each step — like handing a task to a colleague and saying "let me know when you're finished." The typical workflow is plan → accept → autopilot, which means you need to be good at writing plans first. Get comfortable with Interactive and Plan modes, then see the [official docs](https://docs.github.com/copilot/concepts/agents/copilot-cli/autopilot) when you're ready.
+> 📚 **Autopilot mode**: You may have noticed Shift+Tab cycles through a third mode called **Autopilot**. In autopilot mode, Copilot works through an entire plan without waiting for your input after each step — like handing a task to a colleague and saying "let me know when you're finished." The typical workflow is plan → accept → autopilot, which means you need to be good at writing plans first. You can also launch directly into autopilot with `copilot --autopilot "Your task here"`. Get comfortable with Interactive and Plan modes first, then see the [official docs](https://docs.github.com/copilot/concepts/agents/copilot-cli/autopilot) when you're ready.
 
 ---
 

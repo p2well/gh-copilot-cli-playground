@@ -125,7 +125,9 @@ Now that you've seen MCP in action, let's set up additional servers. This sectio
 
 ## MCP Configuration File
 
-MCP servers are configured in `~/.copilot/mcp-config.json` (user-level, applies to all projects) or `.vscode/mcp.json` (project-level, applies to just the current workspace). 
+MCP servers are configured in `~/.copilot/mcp-config.json` (user-level, applies to all projects) or `.mcp.json` (project-level, placed in the root of your project).
+
+> ⚠️ **Note**: `.vscode/mcp.json` is no longer supported as an MCP config source. If you have an existing `.vscode/mcp.json`, migrate it to `.mcp.json` in your project root. The CLI will show a migration hint if it detects an old config file.
 
 ```json
 {
@@ -333,7 +335,7 @@ Here's a full `mcp-config.json` with filesystem and Context7 servers:
 }
 ```
 
-Save this as `~/.copilot/mcp-config.json` for global access or `.vscode/mcp.json` for project-specific configuration.
+Save this as `~/.copilot/mcp-config.json` for global access or `.mcp.json` in the project root for project-specific configuration.
 
 ---
 
@@ -840,7 +842,7 @@ Ready to go deeper? Follow the [Custom MCP Server Guide](mcp-custom-server.md) t
 | Mistake | What Happens | Fix |
 |---------|--------------|-----|
 | Not knowing GitHub MCP is built-in | Trying to install/configure it manually | GitHub MCP is included by default. Just try: "List the recent commits in this repo" |
-| Looking for config in wrong location | Can't find or edit MCP settings | User-level config is in `~/.copilot/mcp-config.json`, project-level is `.vscode/mcp.json` |
+| Looking for config in wrong location | Can't find or edit MCP settings | User-level config is in `~/.copilot/mcp-config.json`, project-level is `.mcp.json` in the project root |
 | Invalid JSON in config file | MCP servers fail to load | Use `/mcp show` to check configuration; validate JSON syntax |
 | Forgetting to authenticate MCP servers | "Authentication failed" errors | Some MCPs need separate auth. Check each server's requirements |
 
