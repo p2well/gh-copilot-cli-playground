@@ -687,21 +687,6 @@ copilot
 
 > 📖 **Learn more**: See [Additional Context Features](../appendices/additional-context.md#working-with-images) for supported formats, practical use cases, and tips for combining images with code.
 
-### Attaching Document Files
-
-In addition to the `@` syntax and image paste, you can attach supported document files (such as PDFs, Word documents, and text files) directly to your prompts. This lets Copilot read and reason about external reference material — for example, a requirements spec, a design document, or a README from another project.
-
-When you start a prompt, look for the attachment option in the CLI interface to attach a file from your filesystem. Copilot will read the document's content and incorporate it into its response.
-
-```bash
-copilot
-
-# After attaching a document file (e.g. requirements.pdf), ask:
-> Based on the requirements I attached, what changes need to be made to @samples/book-app-project/book_app.py?
-```
-
-> 💡 **When is this useful?** Use document attachment when you have reference material that isn't already in your codebase — like a design spec, an API contract, or a brief from a stakeholder. It's faster than copy-pasting large documents into your prompt.
-
 </details>
 
 ---
